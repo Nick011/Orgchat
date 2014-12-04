@@ -9,6 +9,7 @@ Requirements:
 - NodeJS
 - Redis
 
+
 Instructions:
 - Download
 ``` npm install ```
@@ -20,4 +21,10 @@ http://localhost:8000/socket.io/chat/demo/?username=Alice&id=3
 
 
 Live Demo:
+http://orgchat.herokuapp.com/socket.io/chat/demo/?username=John&id=3
+http://orgchat.herokuapp.com/socket.io/chat/demo/?username=Alice&id=2
 
+
+Development:
+``` gulp ```
+``` node app.js --dev=true ```
