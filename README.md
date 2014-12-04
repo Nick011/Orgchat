@@ -22,6 +22,7 @@ http://localhost:8000/socket.io/chat/demo/?username=Alice&id=3
 
 ### Live Demo:
 
+(Open both of these in new tabs)
 http://orgchat.herokuapp.com/socket.io/chat/demo/?username=John&id=3
 http://orgchat.herokuapp.com/socket.io/chat/demo/?username=Alice&id=2
 
