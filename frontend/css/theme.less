@@ -1,0 +1,70 @@
+//fonts
+@fontFamily: Helvetica, Arial, sans-serif;
+
+//colors
+@headerBgColor: #b4d372;
+@headerFontColor: #006A35;
+@bodyBgColor: #E6EBD4;
+@bodyFontColor: #000;
+@trimColor: #006A35;
+@alertColor: #fff;
+
+
+.chat_users_container {
+	font-family: @fontFamily;
+	border-color: @trimColor;
+	color: @bodyFontColor;
+	background-color: @bodyBgColor;
+}
+
+.chat_users_container > h3 {
+	border-color: @trimColor;
+	background-color: @headerBgColor;
+  color: @headerFontColor;
+}
+
+.chat_users > li {
+	border-color: @trimColor;
+}
+
+.chat_convos_container {
+	font-family: @fontFamily;
+  color: @bodyFontColor;
+}
+
+.chat_convo {
+	border-color: @trimColor;
+	background-color: @bodyBgColor;
+
+	header {
+		border-color: @trimColor;
+		background-color: @headerBgColor;
+    color: @headerFontColor;
+	}
+
+	.chat_notify {
+    background-color: @alertColor;
+  }
+}
+
+.chat_find_users {
+	 background-color: @bodyBgColor;
+	 border-color: @trimColor;
+}
+
+.chat_group_users {
+	background-color: @bodyBgColor;
+
+	li {
+		border-color: @trimColor;
+	}
+}
+
+.chat_new_message_container {
+	background-color: @bodyBgColor;
+	form {
+		border-color: @trimColor;
+	}
+}
+
+

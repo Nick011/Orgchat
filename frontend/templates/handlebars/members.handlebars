@@ -1,0 +1,8 @@
+<ul>
+<li>hello</li>
+{{#each users }}
+  {{#if this.username }}
+    <li data-socket-id="{{ this.socket_id }}">{{ this.username }}</li>
+  {{/if }}
+{{/each }}
+</ul>

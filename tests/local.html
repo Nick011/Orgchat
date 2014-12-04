@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<!-- settings from verifip-web -->
+<script>
+  //PASS CONNECTION DATA FROM SERVER
+  var CHAT_CONNECTION = {
+    user_id: 1,
+    username: 'Nick Hagianis',
+    organization_id: 129,
+    container: '.sidebar'
+  };
+
+
+  //demo settings not for prod!
+  function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + name + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(window.location.search);
+    if (results == null) {
+      return "";
+    }
+    else {
+      return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+  }
+
+  CHAT_CONNECTION.user_id = getParameterByName('id');
+  CHAT_CONNECTION.username = getParameterByName('username');
+  CHAT_CONNECTION.organization_id = getParameterByName('org') || 129;
+</script>
+
+<style>
+.sidebar {
+  position: absolute;
+  right: 0px;
+  top: 45px;
+  height: 400px;
+}
+</style>
+</head>
+<body>
+<audio id="audiotag1" src="/socket.io/chat/sound/ding.wav" preload="auto"></audio>
+
+	
+<div class="sidebar">
+
+</div>
+
+<script data-main="/socket.io/chat/main-built.js" src="/socket.io/chat/require-2.1.5.min.js"></script>
+</body>
+</html>

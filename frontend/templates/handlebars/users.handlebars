@@ -1,0 +1,9 @@
+<h3>Users</h3>
+<ul class="chat_users">
+{{#each users}}
+  <li id="{{ this.socket_id }}">
+    {{ this.username }}
+  </li>
+{{/each }}
+</ul>
+<audio id="audiotag1" src="{{ root }}/socket.io/chat/sound/ding.wav" preload="auto"></audio>

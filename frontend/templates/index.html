@@ -1,0 +1,76 @@
+<script id="chat_base" type="text/x-handlebars-template">
+<div class="chat_users_container"></div>
+<div class="chat_convos_container"></div>
+</script>
+
+<script id="org_users_tmp" type="text/x-handlebars-template">
+<h3>Users</h3>
+<ul class="chat_users">
+{{#each users}}
+  <li id="{{ this.socket_id }}">
+    {{ this.username }}
+  </li>
+{{/each }}
+</ul>
+</script>
+
+<script id="convo_tmp" type="text/x-handlebars-template">
+<div id="{{ group_id}}" class="chat_convo_wrap">
+  <div class="chat_convo">
+    <header>
+      <h3>(group)</h3>
+      <div class="chat_controls" data-group-id="{{ group_id }}">
+        <i class="chat_close icon-remove"></i>
+        <i class="chat_group_members icon-group"></i>
+        <i class="chat_add_users icon-plus"></i>
+      </div>
+    </header>
+    <div class="chat_convo_body">
+      <div class="chat_find_users">
+        <form class="chat_add_users">
+          <select data-placeholder="Enter users name" multiple style="width:250px" class="chzn-select">
+          </select>
+          <button>Add</button>
+        </form>
+      </div>
+
+      <div class="chat_group_users"></div>
+
+      <div class="chat_convo_messages"></div>
+
+
+      <div class="chat_new_message_container">
+        <form data-group-id="{{ group_id }}">
+          <textarea class="chat_new_message"></textarea>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+<script id="find_users_tmp" type="text/x-handlebars-template">
+{{#each users }}
+  <option value="{{ this.socket_id }}">{{ this.username }}</option>
+{{/each }}
+</script>
+
+<script id="group_members_list_tmp" type="text/x-handlebars-template">
+<ul>
+{{#each users }}
+  {{#if this.username }}
+    <li>{{ this.username }}</li>
+  {{/if }}
+{{/each }}
+</ul>
+</script>
+
+<script id="message_tmp" type="text/x-handlebars-template">
+<div class="chat_message">
+  {{#if username}}
+  <b>{{ username }}:</b> {{ message }}
+  {{ else }}
+  <i>{{ message }}</i>
+  {{/if }}
+</div>
+</script>

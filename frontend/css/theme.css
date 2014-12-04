@@ -1,0 +1,9 @@
+.chat_users_container{font-family:Helvetica,Arial,sans-serif;border-color:#006a35;color:#000000;background-color:#e6ebd4;}
+.chat_users_container>h3{border-color:#006a35;background-color:#b4d372;color:#006a35;}
+.chat_users>li{border-color:#006a35;}
+.chat_convos_container{font-family:Helvetica,Arial,sans-serif;color:#000000;}
+.chat_convo{border-color:#006a35;background-color:#e6ebd4;}.chat_convo header{border-color:#006a35;background-color:#b4d372;color:#006a35;}
+.chat_convo .chat_notify{background-color:#ffffff;}
+.chat_find_users{background-color:#e6ebd4;border-color:#006a35;}
+.chat_group_users{background-color:#e6ebd4;}.chat_group_users li{border-color:#006a35;}
+.chat_new_message_container{background-color:#e6ebd4;}.chat_new_message_container form{border-color:#006a35;}
