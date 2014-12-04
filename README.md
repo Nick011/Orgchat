@@ -5,26 +5,28 @@ A drop-in javascript chat service for social and enterprise apps.
 
 See demo folder for an example.
 
-Requirements:
+### Requirements:
 - NodeJS
 - Redis
 
 
-Instructions:
+### Instructions:
 - Download
-``` npm install ```
-``` redis-server ```
-``` node app.js --dev=true ```
+- ``` npm install ```
+- ``` redis-server ```
+- ``` node app.js --dev=true ```
 
 http://localhost:8000/socket.io/chat/demo/?username=Steve&id=4
 http://localhost:8000/socket.io/chat/demo/?username=Alice&id=3
 
 
-Live Demo:
+### Live Demo:
+
 http://orgchat.herokuapp.com/socket.io/chat/demo/?username=John&id=3
 http://orgchat.herokuapp.com/socket.io/chat/demo/?username=Alice&id=2
 
 
-Development:
-``` gulp ```
-``` node app.js --dev=true ```
+### Development:
+- ``` gulp ```
+- ``` redis-server ```
+- ``` node app.js --dev=true ```
