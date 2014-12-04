@@ -9,7 +9,7 @@ define([
 
   var initialize = function() {
 
-    //var ROOT = '//verifip-chat-server.herokuapp.com';
+    //var ROOT = '//orgchat.herokuapp.com';
     var ROOT = '//localhost:8000';
 
     //load css.

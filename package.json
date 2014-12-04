@@ -1,7 +1,7 @@
 {
-  "name": "verifip-chat",
-  "version": "0.0.8",
-  "description": "Chat system for VerifIP",
+  "name": "Orgchat",
+  "version": "0.0.9",
+  "description": "Chat system for social networks or intranets",
   "main": "app.js",
   "directories": {
     "test": "tests"
@@ -11,7 +11,8 @@
     "lodash": "~1.1.1",
     "node-uuid": "~1.4.0",
     "redis": "~0.8.3",
-    "socket.io": "~0.9.14"
+    "socket.io": "~0.9.14",
+    "yargs": "^1.3.3"
   },
   "devDependencies": {
     "gulp": "^3.8.9",
@@ -28,10 +29,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/verifip/verifip-chat.git"
+    "url": ""
   },
   "keywords": [
-    "chat"
+    "chat",
+    "social"
   ],
   "author": "Nick Hagianis",
   "license": "BSD",

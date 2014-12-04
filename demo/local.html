@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <head>
-<!-- settings from verifip-web -->
 <script>
   //PASS CONNECTION DATA FROM SERVER
   var CHAT_CONNECTION = {
@@ -41,13 +40,13 @@
 </style>
 </head>
 <body>
+<audio id="audiotag1" src="/socket.io/chat/sound/ding.wav" preload="auto"></audio>
 
+	
 <div class="sidebar">
 
 </div>
-<!--
-<script data-main="//verifip-chat-server.herokuapp.com/socket.io/chat/main-built.js" src="//verifip-chat-server.herokuapp.com/socket.io/chat/require-2.1.5.min.js"></script>
--->
-<script
+
+<script data-main="/socket.io/chat/main-built.js" src="/socket.io/chat/require-2.1.5.min.js"></script>
 </body>
 </html>

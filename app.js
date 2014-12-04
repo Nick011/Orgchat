@@ -3,18 +3,14 @@ var cluster = require('cluster')
   , sio = require('socket.io')
   , lo = require('lodash')
   , redis = require('redis')
-  , port = process.env.PORT || 8000
-  , numCPUs = require('os').cpus().length
   , RedisStore = sio.RedisStore
   , organization = require('./controllers/organization')
   , chat = require('./controllers/chat')
   , group = require('./controllers/group')
   , util = require('util')
-  , args = process.argv.slice(2)
-  , DEV = args['dev'] || process.env.DEV || null;
-
-var DEV = true;
-
+  , argv = require('yargs').argv
+  , port = argv.port || process.env.PORT || 8000
+  , DEV = argv.dev || process.env.DEV || false;
 
 //else it's a worker process, boot up a server
 var httpServer = http.createServer().listen(port)
@@ -22,9 +18,9 @@ var httpServer = http.createServer().listen(port)
 
 //configure redis
 var redisOptions = {
-  port: args['redis-port'] || 6379, 
-  hostname: args['redis-host'] || '127.0.0.1', 
-  password: args['redis-password'] || ''
+  port: argv.redis_port || 6379, 
+  hostname: argv.redis_host || '127.0.0.1', 
+  password: argv.redis_password || ''
 };
 
 var pub = redis.createClient(redisOptions.port, redisOptions.hostname);
